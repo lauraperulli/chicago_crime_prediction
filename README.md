@@ -19,6 +19,7 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 # 🛠️ Pipeline e Codice:
 Il progetto segue una pipeline suddivisa in tre fasi:
 1. Analisi e pulizia del Dataset:
+   - Importazione delle librerie usate: (Pandas, Numpy, Matplotlib, Seaborn, Folium, Scikit-Learn).
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
    - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche:
      
@@ -34,12 +35,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      
      ```Python
      # Elenco delle colonne identificate come non rilevanti per la predizione
-     irrelevant = [
-      'ID', 'Case Number', 'IUCR', 'X Coordinate', 'Y Coordinate', 
-      'Updated On', 'Location', 'Historical Wards', 'Zip Codes', 
-      'Census Tracts', 'Wards', 'Boundaries - ZIP Codes', 
-      'Community Areas', 'FBI Code', 'Ward', 'Beat'
-     ]
+     irrelevant = ['ID', 'Case Number', 'IUCR', 'X Coordinate', 'Y Coordinate', 'Updated On', 'Location', 'Historical Wards', 'Zip Codes', 'Census Tracts', 'Wards', 'Boundaries - ZIP Codes', 'Community Areas', 'FBI Code', 'Ward', 'Beat']
 
      # Rimozione dinamica delle colonne se presenti nel dataframe
      columns_to_drop = [col for col in irrelevant if col in df_input.columns]
@@ -58,19 +54,18 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
-3. Architettura e addestramento del modello di AI:
+3. Visualizzazione dei dati e Data Analysis:
    - Analisi geografica dei crimini a Chicago (mappa di calore interattiva):
      
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
      df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
+     
      # Creazione della mappa interattiva centrata su Chicago
-     chicago_map = folium.Map(location=[df_map_sample['Latitude'].mean(), 
-                                   df_map_sample['Longitude'].mean()], 
-                         zoom_start=11)
+     chicago_map = folium.Map(location=[df_map_sample['Latitude'].mean(), df_map_sample['Longitude'].mean()], zoom_start=11)
+     
      # Preparazione e aggiunta dei dati di calore
-     HeatMap(df_map_sample[['Latitude', 'Longitude']].values.tolist(),
-        radius=15, blur=10, max_zoom=14).add_to(chicago_map)
+     HeatMap(df_map_sample[['Latitude', 'Longitude']].values.tolist(), radius=15, blur=10, max_zoom=14).add_to(chicago_map)
      ```
      👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
      
@@ -92,7 +87,34 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      <img width="650" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
      <img width="650" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
      
-4. Visualizzazione e valutazione dei risultati:
+4. Architettura e addestramento del modello di AI:
+   - Preparazione e selezione delle feature, gestione della stratificazione dividendo il dataset in training/set test, gestione dei valori nulli residui:
+     ```Python
+     # Rimozione classi rare per permettere la suddivisione stratificata
+     class_counts = df['Primary Type'].value_counts()
+     single_sample_classes = class_counts[class_counts == 1].index
+     df_filtered = df[~df['Primary Type'].isin(single_sample_classes)].copy()
+
+     # Imputazione dei valori mancanti nelle feature
+     for col in numerical_features:
+     X.loc[:, col] = X[col].fillna(X[col].mean())
+     for col in categorical_features:
+     X.loc[:, col] = X[col].fillna('sconosciuto').astype(str)
+     ```
+     
+   - Regressione Logistica per l'addestramento configurata (class_weight='balanced'), utilizzo di Scikit-Learn per automatizzare il flusso di lavoro. Uso di "StandardScaler" per variabili numeriche e "OneHotEncoder" per trasformare quelle categoriche in numeriche.
+     ```Python
+     # Definizione del pre-processore multimodale
+     preprocessor = ColumnTransformer(transformers=[('num', StandardScaler(), numerical_features), ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)])
+
+     # Creazione del modello con bilanciamento delle classi
+     model = Pipeline(steps=[('preprocessor', preprocessor),('classifier', LogisticRegression(solver='liblinear', class_weight='balanced'))])
+
+     # Addestramento stratificato
+     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y) model.fit(X_train, y_train)
+     ```
+
+
 
 # 💻 Tecnologie utilizzate: 
 - Linguaggio di programmazione: Python.
