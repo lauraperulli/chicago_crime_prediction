@@ -114,7 +114,31 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y) model.fit(X_train, y_train)
      ```
 
+   - Valutazione e Risultati Predittivi: (metriche di classificazione evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78, Risk Analysis per Community Area)
+     ```Python
+     # Valutazione accuratezza e generazione del report dettagliato
+     y_pred = model.predict(X_test)
+     print(f"- Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+     print(classification_report(y_test, y_pred, target_names=model.named_steps['classifier'].classes_))
+     ```
+     
+     ```Python
+     # Calcolo ROC AUC Score specifico per la classe 'THEFT'
+      y_prob_theft = model.predict_proba(X_test)[:, theft_class_index]
+      roc_auc_theft = roc_auc_score(y_test_theft_binary, y_prob_theft)
 
+      # Generazione della curva ROC
+      fpr_theft, tpr_theft, _ = roc_curve(y_test_theft_binary, y_prob_theft)
+      plt.plot(fpr_theft, tpr_theft, label=f'Curva ROC THEFT (area = {roc_auc_theft:.2f})')
+     ```
+     
+     ```Python
+     # Aggregazione delle probabilità medie predette per ogni quartiere
+     prob_by_comm = df_filtered.groupby('Community Area')['Predicted_Probability_THEFT'].mean().sort_values(ascending=False)
+
+     # Visualizzazione della classifica di rischio per Community Area
+     sns.barplot(x=prob_by_comm.index, y=prob_by_comm.values, palette='coolwarm')
+     ```
 
 # 💻 Tecnologie utilizzate: 
 - Linguaggio di programmazione: Python.
