@@ -21,6 +21,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
 1. Analisi e pulizia del Dataset:
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
    - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche:
+     
      ```Python
      # Rimozione record duplicati
      df.drop_duplicates(inplace=True)
@@ -30,6 +31,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      df.dropna(subset=critical_subset_cols, inplace=True)
      ```
    - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...):
+     
      ```Python
      # Elenco delle colonne identificate come non rilevanti per la predizione
      irrelevant = [
@@ -45,6 +47,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      df_input.drop(columns=columns_to_drop, inplace=True)
      ```
    - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi:
+     
      ```Python
      # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
      df['Is_Crime_Type'] = (df['Primary Type'] == crimine_da_predire).astype(int)
@@ -57,6 +60,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    
 3. Architettura e addestramento del modello di AI:
    - Analisi geografica dei crimini a Chicago (mappa di calore interattiva):
+     
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
      df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
@@ -71,8 +75,11 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
      
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
-     <img width="550" height="703" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
+     
+     <img width="650" height="703" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
+   
    - Analisi andamento temporale dei crimini (anno, mese, giorno, ora) dei crimini e realizzazione dei GRAFICI A BARRE:
+     
      ```Python
      # Estrazione delle componenti temporali (fondamentali per la predizione)
      df['Year'] = df['Date'].dt.year
@@ -80,10 +87,11 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      df['DayOfWeek'] = df['Date'].dt.dayofweek # 0=Lunedì, 6=Domenica
      df['Hour'] = df['Date'].dt.hour
      ```
-     <img width="550" height="703" alt="AndamentoCriminiAnno" src="https://github.com/user-attachments/assets/ad2d4957-513e-4a82-b1df-b365e1869631" />
-     <img width="550" height="703" alt="AndamentoCriminiMese" src="https://github.com/user-attachments/assets/18775b1f-1232-4452-8fd9-944ba888fd6a" />
-     <img width="550" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
-     <img width="550" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
+     <img width="650" height="703" alt="AndamentoCriminiAnno" src="https://github.com/user-attachments/assets/ad2d4957-513e-4a82-b1df-b365e1869631" />
+     <img width="650" height="703" alt="AndamentoCriminiMese" src="https://github.com/user-attachments/assets/18775b1f-1232-4452-8fd9-944ba888fd6a" />
+     <img width="650" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
+     <img width="650" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
+     
 4. Visualizzazione e valutazione dei risultati:
 
 # 💻 Tecnologie utilizzate: 
