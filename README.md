@@ -55,7 +55,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 2. Architettura e addestramento del modello di AI:
-   - Analisi geografica dei reati più diffusi "THEFT", "BATTERY", "HOMECIDE" (mappa di calore interattiva):
+   - Analisi geografica dei crimini a Chicago (mappa di calore interattiva):
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
      df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
@@ -66,10 +66,24 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      # Preparazione e aggiunta dei dati di calore
      HeatMap(df_map_sample[['Latitude', 'Longitude']].values.tolist(),
         radius=15, blur=10, max_zoom=14).add_to(chicago_map)
-     # Esportazione in formato HTML per GitHub Pages
-     chicago_map.save('chicago_crime_heatmap.html')
      ```
      👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
+   - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE" (Top 15):
+   <img width="1366" height="703" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
+   
+   - Analisi andamento temporale dei crimini (anno, mese, giorno, ora) dei crimini e realizzazione dei GRAFICI A BARRE:
+     ```Python
+     # Estrazione delle componenti temporali (fondamentali per la predizione)
+     df['Year'] = df['Date'].dt.year
+     df['Month'] = df['Date'].dt.month
+     df['DayOfWeek'] = df['Date'].dt.dayofweek # 0=Lunedì, 6=Domenica
+     df['Hour'] = df['Date'].dt.hour
+     ```
+     <img width="1366" height="703" alt="AndamentoCriminiAnno" src="https://github.com/user-attachments/assets/ad2d4957-513e-4a82-b1df-b365e1869631" />
+     <img width="1366" height="703" alt="AndamentoCriminiMese" src="https://github.com/user-attachments/assets/18775b1f-1232-4452-8fd9-944ba888fd6a" />
+     <img width="1366" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
+     <img width="1366" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
+     
 4. Visualizzazione e valutazione dei risultati:
 
 # 💻 Tecnologie utilizzate: 
