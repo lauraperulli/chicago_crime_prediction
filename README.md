@@ -119,7 +119,8 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      model = Pipeline(steps=[('preprocessor', preprocessor),('classifier', LogisticRegression(solver='liblinear', class_weight='balanced'))])
 
      # Addestramento stratificato
-     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y) model.fit(X_train, y_train)
+     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y)
+     model.fit(X_train, y_train)
      ```
 
    - Valutazione e Risultati Predittivi: (classification report completo evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78 e Risk Analysis per Community Area evidenziando le probabilità predette del crimine "THEFT" visualizzando le aree più a rischio e quelle più sicure)
