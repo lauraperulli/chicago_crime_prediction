@@ -14,8 +14,8 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 - Presentazione Power Point del progetto: [CrimePredictionAI_LauraPerulli.pdf](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
 # 🎯 Obiettivo del progetto:
-1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago;
-2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
+1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago
+2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern
 
 # 📂 Dataset: 
 Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025).
