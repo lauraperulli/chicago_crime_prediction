@@ -154,7 +154,8 @@ Il progetto segue una pipeline suddivisa in tre fasi:
 # ✨ Conclusioni
 
 Il progetto ha centrato l'obiettivo. Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla criminalità di Chicago è stato sviluppato un modello predittivo basato sulla Regressione Logistica con cui è stato possibile identificare e visualizzare le tendenze spaziali e temporali della criminalità con un focus maggiore sui "THEFT".
-**Prospettive future:**
+
+**PROSPETTIVE FUTURE:**
 - Migliorare l'accuratezza e testare altri modelli di ML (Random Forest, KNN, Reti Neurali) e implentare un'interfaccia utente interattiva per le previsioni in tempo reale.
 
 # 💻 Tecnologie utilizzate: 
