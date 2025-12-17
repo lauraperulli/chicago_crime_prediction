@@ -21,7 +21,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
 1. Analisi e pulizia del Dataset:
    - Importazione delle librerie usate: (Pandas, Numpy, Matplotlib, Seaborn, Folium, Scikit-Learn).
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
-   - Data Cleaning: (identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche):
+   - Data Cleaning: (identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche)
      
      ```Python
      # Rimozione record duplicati
@@ -31,8 +31,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      critical_subset_cols = ['Latitude', 'Longitude', 'Primary Type', 'Community Area', 'District']
      df.dropna(subset=critical_subset_cols, inplace=True)
      ```
-   - Feature selection:
-     (controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...):
+   - Feature selection: (controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...)
      
      ```Python
      # Elenco delle colonne identificate come non rilevanti per la predizione
@@ -43,7 +42,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      if columns_to_drop:
      df_input.drop(columns=columns_to_drop, inplace=True)
      ```
-   - Defizione della Label: (creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi):
+   - Defizione della Label: (creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi)
      
      ```Python
      # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
@@ -56,7 +55,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 3. Visualizzazione dei dati e Data Analysis:
-   - Analisi geografica dei crimini a Chicago (mappa di calore interattiva):
+   - Analisi geografica dei crimini a Chicago (mappa di calore interattiva)
      
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
@@ -89,7 +88,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      <img width="650" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
      
 4. Architettura e addestramento del modello di AI:
-   - Preparazione e selezione delle feature: (gestione della stratificazione dividendo il dataset in training/set test, gestione dei valori nulli residui):
+   - Preparazione e selezione delle feature: (gestione della stratificazione dividendo il dataset in training/set test, gestione dei valori nulli residui)
      ```Python
      # Rimozione classi rare per permettere la suddivisione stratificata
      class_counts = df['Primary Type'].value_counts()
@@ -103,7 +102,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      X.loc[:, col] = X[col].fillna('sconosciuto').astype(str)
      ```
      
-   - Addestramento del modello con Machine Learning: (Regressione Logistica configurata (class_weight='balanced'), utilizzo di Scikit-Learn per automatizzare il flusso di lavoro, uso di "StandardScaler" per variabili numeriche e "OneHotEncoder" per trasformare quelle categoriche in numeriche):
+   - Addestramento del modello con Machine Learning: (Regressione Logistica configurata (class_weight='balanced'), utilizzo di Scikit-Learn per automatizzare il flusso di lavoro, uso di "StandardScaler" per variabili numeriche e "OneHotEncoder" per trasformare quelle categoriche in numeriche)
      ```Python
      # Definizione del pre-processore multimodale
      preprocessor = ColumnTransformer(transformers=[('num', StandardScaler(), numerical_features), ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)])
