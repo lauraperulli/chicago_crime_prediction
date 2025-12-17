@@ -1,4 +1,4 @@
-# Introduzione:
+# 🔎 Analisi predittiva dei crimini a Chicago
 Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
 l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
