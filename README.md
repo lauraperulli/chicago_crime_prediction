@@ -3,7 +3,7 @@ Ciao, il mio nome è LAURA PERULLI e se sei qui è perchè ti interessa consulta
 
 # 🚀 Di cosa si tratta?
 
-🔎 ANALISI PREDITTIVA dei crimini a Chicago:
+🔎 **ANALISI PREDITTIVA** dei crimini a Chicago:
 - Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
 l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
@@ -12,8 +12,8 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 - Presentazione Power Point del progetto: [CrimePredictionAI_LauraPerulli.pdf](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
 # 🎯 Obiettivo del progetto:
-1. Prevedere la probabilità di furto: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago;
-2. Addestramento del modello di AI: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
+1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago;
+2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
 
 # 📂 Dataset: 
 Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025).
@@ -23,7 +23,8 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 
 # 🛠️ Pipeline e Codice:
 Il progetto segue una pipeline suddivisa in tre fasi:
-1. Analisi e pulizia del Dataset:
+
+**1. Analisi e pulizia del Dataset:**
    - Importazione delle librerie usate: (Pandas, Numpy, Matplotlib, Seaborn, Folium, Scikit-Learn).
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
    - Data Cleaning: (identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche)
@@ -59,7 +60,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
-3. Visualizzazione dei dati e Data Analysis:
+**2. Visualizzazione dei dati e Data Analysis:**
    - Analisi geografica dei crimini a Chicago: visualizzazione delle aree più scure/rosse che evidenziano una maggiore concentrazione di crimini (mappa di calore interattiva)
      
      ```Python
@@ -92,7 +93,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      <img width="650" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
      <img width="650" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
      
-4. Architettura e addestramento del modello di AI:
+**3. Architettura e addestramento del modello di AI:**
    - Preparazione e selezione delle feature: (gestione della stratificazione dividendo il dataset in training/set test, gestione dei valori nulli residui)
      ```Python
      # Rimozione classi rare per permettere la suddivisione stratificata
