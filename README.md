@@ -36,9 +36,9 @@ Il progetto segue una pipeline suddivisa in tre fasi:
     df_input.drop(columns=columns_to_drop, inplace=True)
     print(f"Colonne irrilevanti rimosse: {', '.join(columns_to_drop)}")
    ```
-  - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...);
-  - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato;
-  -
+   - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...);
+   - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato;
+   - 
 2. Architettura e Addestramento del modello di AI:
 3. Visualizzazione e Valutazione dei risultati:
 
