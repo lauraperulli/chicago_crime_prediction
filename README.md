@@ -23,21 +23,11 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche;
    ```Python
    # Rimozione record duplicati
-   initial_rows = df.shape[0]
    df.drop_duplicates(inplace=True)
-   print(f"\nRimozione duplicati: {initial_rows - df.shape[0]} record rimossi. Righe attuali: {df.shape[0]}")
    
    # Gestione dei valori nulli
-   print("\nValori nulli per colonna (prima della pulizia):")
-   # Visualizza solo le colonne che contengono valori nulli
-   print(df.isnull().sum()[df.isnull().sum() > 0])
-   # Rimozione righe dove sono presenti NaN
    critical_subset_cols = ['Latitude', 'Longitude', 'Primary Type', 'Community Area', 'District']
-   initial_rows_after_dups = df.shape[0]
    df.dropna(subset=critical_subset_cols, inplace=True)
-   print(f"\nRighe rimosse per NaN in ({', '.join(critical_subset_cols)}): {initial_rows_after_dups - df.shape[0]}. Righe attuali: {df.shape[0]}")
-   print("\nValori nulli per colonna (dopo la pulizia):")
-   print(df.isnull().sum()[df.isnull().sum() > 0])
    ```
    - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...);
     ```Python
