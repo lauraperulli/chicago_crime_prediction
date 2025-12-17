@@ -44,14 +44,15 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      if columns_to_drop:
      df_input.drop(columns=columns_to_drop, inplace=True)
      ```
-   - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi: 
-   ```Python
-   # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
-   df['Is_Crime_Type'] = (df['Primary Type'] == crimine_da_predire).astype(int)
-   # Calcolo conteggi e percentuali per l'analisi dello sbilanciamento
-   label_counts = df['Is_Crime_Type'].value_counts()
-   label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
-   ```
+   - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi:
+     ```Python
+     # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
+     df['Is_Crime_Type'] = (df['Primary Type'] == crimine_da_predire).astype(int)
+     
+     # Calcolo conteggi e percentuali per l'analisi dello sbilanciamento
+     label_counts = df['Is_Crime_Type'].value_counts()
+     label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
+     ```
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 3. Architettura e addestramento del modello di AI:
