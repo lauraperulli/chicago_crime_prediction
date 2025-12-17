@@ -22,11 +22,22 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance;
    - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche;
    ```Python
-   <pre>
-   </pre
-   - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...);
+   # Elenco delle colonne identificate come non rilevanti per la predizione
+   irrelevant = [
+    'ID', 'Case Number', 'IUCR', 'X Coordinate', 'Y Coordinate', 
+    'Updated On', 'Location', 'Historical Wards', 'Zip Codes', 
+    'Census Tracts', 'Wards', 'Boundaries - ZIP Codes', 
+    'Community Areas', 'FBI Code', 'Ward', 'Beat'
+   ]
+   
+   # Rimozione dinamica delle colonne se presenti nel dataframe
+   columns_to_drop = [col for col in irrelevant if col in df_input.columns]
+   if columns_to_drop:
+    df_input.drop(columns=columns_to_drop, inplace=True)
+    print(f"Colonne irrilevanti rimosse: {', '.join(columns_to_drop)}")
+- Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...);
    - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato;
-   - 
+   -
 2. Architettura e Addestramento del modello di AI:
 3. Visualizzazione e Valutazione dei risultati:
 
