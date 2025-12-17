@@ -161,4 +161,4 @@ Il progetto ha centrato l'obiettivo. Attraverso un'analisi esplorativa dettaglia
 - Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
 - Machine Learning: Scikit-Learn
 
-#👋 ** GRAZIE PER L'ATTENZIONE!**
+# 👋 **GRAZIE PER L'ATTENZIONE!**
