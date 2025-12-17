@@ -31,7 +31,8 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      critical_subset_cols = ['Latitude', 'Longitude', 'Primary Type', 'Community Area', 'District']
      df.dropna(subset=critical_subset_cols, inplace=True)
      ```
-   - Feature selection: (controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...):
+   - Feature selection:
+     (controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...):
      
      ```Python
      # Elenco delle colonne identificate come non rilevanti per la predizione
