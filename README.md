@@ -148,7 +148,12 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      
      <img width="650" height="703" alt="ROC_CurveTheft" src="https://github.com/user-attachments/assets/f16fef65-d95b-4ad2-9204-b4385c928a1a" />
      <img width="650" height="703" alt="ProbabilitaTheftCommunityArea" src="https://github.com/user-attachments/assets/ae758f92-aa58-4b8a-8b8e-1ca1d3e65210" />
+     
+# ✨ Conclusioni
 
+Il progetto ha centrato l'obiettivo. Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla criminalità di Chicago è stato sviluppato un modello predittivo basato sulla Regressione Logistica con cui è stato possibile identificare e visualizzare le tendenze spaziali e temporali della criminalità con un focus maggiore sui "THEFT".
+**Prospettive future:**
+- Migliorare l'accuratezza e testare altri modelli di ML (Random Forest, KNN, Reti Neurali) e implentare un'interfaccia utente interattiva per le previsioni in tempo reale.
 
 # 💻 Tecnologie utilizzate: 
 - Linguaggio di programmazione: Python
