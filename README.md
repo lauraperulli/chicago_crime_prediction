@@ -170,5 +170,9 @@ Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla 
 - Data Analysis: Pandas, Numpy
 - Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
 - Machine Learning: Scikit-Learn
+- ⚙️ Installazione: Per installare tutte le librerie necessarie ed eseguire il progetto localmente
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 # 👋 **GRAZIE PER L'ATTENZIONE!**
