@@ -160,3 +160,5 @@ Il progetto ha centrato l'obiettivo. Attraverso un'analisi esplorativa dettaglia
 - Data Analysis: Pandas, Numpy
 - Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
 - Machine Learning: Scikit-Learn
+
+#👋 ** GRAZIE PER L'ATTENZIONE!**
