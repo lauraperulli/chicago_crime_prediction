@@ -2,10 +2,14 @@
 Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
 l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
-Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici Kaggle (2001-2025) "Crimes at Chicago" per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
+Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
 
 # 🎯 Obiettivo del progetto:
-1. Analisi preliminare dei Pattern: pulizia dei dati, selezione delle colonne rilevanti/irrilevanti, creazione della Label (distribuzione sbilanciata dei dati);
-2. Visualizzazione dei dati: analisi geografica interattiva (heatmap) per localizzare le zone ad alta densità criminale;
-3. Esplorazione e identificazione dei Pattern: analisi andamento temporale (anno, mese, giorno e ora) dei crimini;
-4. Addestramento del modello AI: suddivisione dataset training/test, accuracy, classification report, curva ROC AUC, stima probabilità di THEFT per Community Area.
+1. Prevedere la probabilità di furto: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago;
+2. Addestramento del modello di AI: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
+
+# 📂 Dataset: 
+Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025).
+- Dimensione originale: Oltre 7 milioni di record;
+- Dataset analizzato: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
+- Feature principali: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
