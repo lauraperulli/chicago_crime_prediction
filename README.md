@@ -45,7 +45,13 @@ Il progetto segue una pipeline suddivisa in tre fasi:
     df_input.drop(columns=columns_to_drop, inplace=True)
    ```
    - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato;
-   - 
+   ```Python
+   # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
+   df['Is_Crime_Type'] = (df['Primary Type'] == crimine_da_predire).astype(int)
+   # Calcolo conteggi e percentuali per l'analisi dello sbilanciamento
+   label_counts = df['Is_Crime_Type'].value_counts()
+   label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
+   ```
 2. Architettura e Addestramento del modello di AI:
 3. Visualizzazione e Valutazione dei risultati:
 
