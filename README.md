@@ -18,7 +18,7 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 
 # 🛠️ Pipeline e Codice:
 Il progetto segue una pipeline suddivisa in tre fasi:
-1. Analisi e Pulizia del Dataset:
+1. Analisi e pulizia del Dataset:
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance;
    - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche.
    ```Python
@@ -54,8 +54,23 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    ```
    <img width="650" height="703" alt="Grafico1_DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
-2. Architettura e Addestramento del modello di AI:
-3. Visualizzazione e Valutazione dei risultati:
+2. Architettura e addestramento del modello di AI:
+   - Analisi geografica (mappa di calore interattiva):
+     ```Python
+     # Selezione di un sottoinsieme per ottimizzare la visualizzazione
+     df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
+     # Creazione della mappa interattiva centrata su Chicago
+     chicago_map = folium.Map(location=[df_map_sample['Latitude'].mean(), 
+                                   df_map_sample['Longitude'].mean()], 
+                         zoom_start=11)
+     # Preparazione e aggiunta dei dati di calore
+     HeatMap(df_map_sample[['Latitude', 'Longitude']].values.tolist(),
+        radius=15, blur=10, max_zoom=14).add_to(chicago_map)
+     # Esportazione in formato HTML per GitHub Pages
+     chicago_map.save('chicago_crime_heatmap.html')
+     ```
+     👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
+4. Visualizzazione e valutazione dei risultati:
 
 # 💻 Tecnologie utilizzate: 
 - Linguaggio di programmazione: Python.
