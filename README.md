@@ -52,8 +52,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    label_counts = df['Is_Crime_Type'].value_counts()
    label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
    ```
-   <img src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" alt="DistribuzioneLabelTheft_vs_ALtri crimini" width="650" height="703" style="display: block; margin-left: auto; margin-right: auto;">
-
+   <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 2. Architettura e addestramento del modello di AI:
    - Analisi geografica dei reati più diffusi (mappa di calore interattiva):
