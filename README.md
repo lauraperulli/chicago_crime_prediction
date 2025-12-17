@@ -69,7 +69,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
-   <img width="1366" height="703" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
+   <img width="1000" height="703" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
    
    - Analisi andamento temporale dei crimini (anno, mese, giorno, ora) dei crimini e realizzazione dei GRAFICI A BARRE:
      ```Python
@@ -79,10 +79,10 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      df['DayOfWeek'] = df['Date'].dt.dayofweek # 0=Lunedì, 6=Domenica
      df['Hour'] = df['Date'].dt.hour
      ```
-     <img width="1366" height="703" alt="AndamentoCriminiAnno" src="https://github.com/user-attachments/assets/ad2d4957-513e-4a82-b1df-b365e1869631" />
-     <img width="1366" height="703" alt="AndamentoCriminiMese" src="https://github.com/user-attachments/assets/18775b1f-1232-4452-8fd9-944ba888fd6a" />
-     <img width="1366" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
-     <img width="1366" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
+     <img width="1000" height="703" alt="AndamentoCriminiAnno" src="https://github.com/user-attachments/assets/ad2d4957-513e-4a82-b1df-b365e1869631" />
+     <img width="1000" height="703" alt="AndamentoCriminiMese" src="https://github.com/user-attachments/assets/18775b1f-1232-4452-8fd9-944ba888fd6a" />
+     <img width="1000" height="703" alt="AndamentoCriminiGiorno" src="https://github.com/user-attachments/assets/0abd1d7e-af45-4a0f-8d90-bebe0874146c" />
+     <img width="1000" height="703" alt="AndamentoCriminiOra" src="https://github.com/user-attachments/assets/d139b2ba-e1c4-40d1-89d1-362a8a80596f" />
      
 4. Visualizzazione e valutazione dei risultati:
 
