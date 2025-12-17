@@ -154,7 +154,13 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      
 # ✨ Conclusioni
 
-Il progetto ha centrato l'obiettivo. Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla criminalità di Chicago è stato sviluppato un modello predittivo basato sulla Regressione Logistica con cui è stato possibile identificare e visualizzare le tendenze spaziali e temporali della criminalità con un focus maggiore sui "THEFT".
+**🔋 Completezza del progetto 95%**
+/ **📊 Comprensione dei dati 90%**
+/ **📌 Precisione del modello 78%**
+/ **💭 Applicabilità 85%**
+
+Il progetto ha centrato l'obiettivo. Il valore evidenziato dell'accuratezza di 0.32 è causato dal fatto che si tratta di un modello con classi sbilanciate ma la curva ROC AUC del 0.78 è un indicatore molto più affidabile.
+Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla criminalità di Chicago è stato sviluppato un modello predittivo basato sulla Regressione Logistica con cui è stato possibile identificare e visualizzare le tendenze spaziali e temporali della criminalità con un focus maggiore sui "THEFT". 
 
 **PROSPETTIVE FUTURE:**
 - Migliorare l'accuratezza e testare altri modelli di ML (Random Forest, KNN, Reti Neurali) e implentare un'interfaccia utente interattiva per le previsioni in tempo reale.
