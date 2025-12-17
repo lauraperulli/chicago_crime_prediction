@@ -19,8 +19,8 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 # 🛠️ Pipeline e Codice:
 Il progetto segue una pipeline suddivisa in tre fasi:
 1. Analisi e pulizia del Dataset:
-   - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance;
-   - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche.
+   - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
+   - Data Cleaning: identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche:
    ```Python
    # Rimozione record duplicati
    df.drop_duplicates(inplace=True)
@@ -29,7 +29,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    critical_subset_cols = ['Latitude', 'Longitude', 'Primary Type', 'Community Area', 'District']
    df.dropna(subset=critical_subset_cols, inplace=True)
    ```
-   - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...).
+   - Feature selection: controllo di variabili rilevanti e rimozione di quelle irrilevanti (ID, Case Number, FBI Code, ecc...):
     ```Python
    # Elenco delle colonne identificate come non rilevanti per la predizione
    irrelevant = [
@@ -44,7 +44,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    if columns_to_drop:
     df_input.drop(columns=columns_to_drop, inplace=True)
    ```
-   - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi. 
+   - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi: 
    ```Python
    # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
    df['Is_Crime_Type'] = (df['Primary Type'] == crimine_da_predire).astype(int)
@@ -55,7 +55,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 2. Architettura e addestramento del modello di AI:
-   - Analisi geografica dei reati più diffusi (mappa di calore interattiva):
+   - Analisi geografica dei reati più diffusi "THEFT", "BATTERY", "HOMECIDE" (mappa di calore interattiva):
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
      df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
