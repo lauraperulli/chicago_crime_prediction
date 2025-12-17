@@ -1,5 +1,5 @@
 # 🤝 Presentazione
-Ciao, il mio nome è LAURA PERULLI e se sei qui è perchè ti interessa consultare i progetti che ho realizzato. Buona visione!!!
+Ciao, il mio nome è LAURA PERULLI - BSc in "Statistics e Big Data", se sei qui è perchè ti interessa consultare i progetti che ho realizzato. Buona visione!!!
 
 # 🚀 Di cosa si tratta?
 
