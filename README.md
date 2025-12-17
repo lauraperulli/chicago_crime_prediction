@@ -15,3 +15,11 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 - Dimensione originale: Oltre 7 milioni di record;
 - Dataset analizzato: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
 - Feature principali: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
+
+
+
+
+# 💻 Tecnologie utilizzate: 
+- Linguaggio di programmazione: Python.
+- Librerie: Pandas, NumPy, Scikit-Learn.
+- Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive).
