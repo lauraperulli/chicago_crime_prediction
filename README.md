@@ -55,7 +55,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    <img width="650" height="703" alt="Grafico1_DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 2. Architettura e addestramento del modello di AI:
-   - Analisi geografica (mappa di calore interattiva):
+   - Analisi geografica dei reati più diffusi (mappa di calore interattiva):
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
      df_map_sample = df_map.sample(n=min(len(df_map), sample_size), random_state=42)
