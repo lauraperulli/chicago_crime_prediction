@@ -43,7 +43,6 @@ Il progetto segue una pipeline suddivisa in tre fasi:
    columns_to_drop = [col for col in irrelevant if col in df_input.columns]
    if columns_to_drop:
     df_input.drop(columns=columns_to_drop, inplace=True)
-    print(f"Colonne irrilevanti rimosse: {', '.join(columns_to_drop)}")
    ```
    - Defizione della Label: creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato;
    - 
