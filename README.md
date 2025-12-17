@@ -8,4 +8,4 @@ Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati st
 1. Analisi preliminare dei Pattern: pulizia dei dati, selezione delle colonne rilevanti/irrilevanti, creazione della Label (distribuzione sbilanciata dei dati);
 2. Visualizzazione dei dati: analisi geografica interattiva (heatmap) per localizzare le zone ad alta densità criminale;
 3. Esplorazione e identificazione dei Pattern: analisi andamento temporale (anno, mese, giorno e ora) dei crimini;
-4. Addestramento del modello AI: suddivisione dataset training/test, accuracy, classificatin report, curva ROC AUC, stima probabilità di THEFT per Community Area.
+4. Addestramento del modello AI: suddivisione dataset training/test, accuracy, classification report, curva ROC AUC, stima probabilità di THEFT per Community Area.
