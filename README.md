@@ -114,7 +114,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y) model.fit(X_train, y_train)
      ```
 
-   - Valutazione e Risultati Predittivi: (metriche di classificazione evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78, Risk Analysis per Community Area)
+   - Valutazione e Risultati Predittivi: (metriche di classificazione evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78 e Risk Analysis per Community Area con GRAFICI)
      ```Python
      # Valutazione accuratezza e generazione del report dettagliato
      y_pred = model.predict(X_test)
@@ -139,6 +139,10 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      # Visualizzazione della classifica di rischio per Community Area
      sns.barplot(x=prob_by_comm.index, y=prob_by_comm.values, palette='coolwarm')
      ```
+     
+     <img width="650" height="703" alt="ROC_CurveTheft" src="https://github.com/user-attachments/assets/f16fef65-d95b-4ad2-9204-b4385c928a1a" />
+     <img width="650" height="703" alt="ProbabilitaTheftCommunityArea" src="https://github.com/user-attachments/assets/ae758f92-aa58-4b8a-8b8e-1ca1d3e65210" />
+
 
 # 💻 Tecnologie utilizzate: 
 - Linguaggio di programmazione: Python.
