@@ -1,10 +1,15 @@
-# 🔎 Analisi predittiva dei crimini a Chicago
-Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
+# 🤝 Presentazione
+Ciao, il mio nome è LAURA PERULLI e se sei qui è perchè ti interessa consultare i progetti che ho realizzato. Buona visione!!!
+
+# 🚀 Di cosa si tratta?
+
+🔎 ANALISI PREDITTIVA dei crimini a Chicago:
+- Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
 l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
-Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
+- Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
 
-Presentazione Power Point: [CrimePredictionAI_LauraPerulli.pdf](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
+- Presentazione Power Point del progetto: [CrimePredictionAI_LauraPerulli.pdf](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
 # 🎯 Obiettivo del progetto:
 1. Prevedere la probabilità di furto: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago;
@@ -55,7 +60,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 3. Visualizzazione dei dati e Data Analysis:
-   - Analisi geografica dei crimini a Chicago (mappa di calore interattiva)
+   - Analisi geografica dei crimini a Chicago: visualizzazione delle aree più scure/rosse che evidenziano una maggiore concentrazione di crimini (mappa di calore interattiva)
      
      ```Python
      # Selezione di un sottoinsieme per ottimizzare la visualizzazione
@@ -114,7 +119,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y) model.fit(X_train, y_train)
      ```
 
-   - Valutazione e Risultati Predittivi: (metriche di classificazione evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78 e Risk Analysis per Community Area con GRAFICI)
+   - Valutazione e Risultati Predittivi: (classification report completo evidenziando un Accuracy di 0.32, analisi curva ROC AUC con un punteggio di 0.78 e Risk Analysis per Community Area evidenziando le probabilità predette del crimine "THEFT" visualizzando le aree più a rischio e quelle più sicure)
      ```Python
      # Valutazione accuratezza e generazione del report dettagliato
      y_pred = model.predict(X_test)
@@ -145,6 +150,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
 
 
 # 💻 Tecnologie utilizzate: 
-- Linguaggio di programmazione: Python.
-- Librerie: Pandas, NumPy, Scikit-Learn.
-- Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive).
+- Linguaggio di programmazione: Python
+- Data Analysis: Pandas, Numpy
+- Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
+- Machine Learning: Scikit-Learn
