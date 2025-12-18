@@ -179,5 +179,4 @@ Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla 
   pip install -r requirements.txt
   ```
 
-
 # **GRAZIE PER L'ATTENZIONE!** ✨
