@@ -63,6 +63,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
      ```
      <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
+     <p align="center"> <img width="550" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 **2. Visualizzazione dei dati e Data Analysis:**
    - Analisi geografica dei crimini a Chicago: visualizzazione delle aree più scure/rosse che evidenziano una maggiore concentrazione di crimini (mappa di calore interattiva)
@@ -77,7 +78,9 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      # Preparazione e aggiunta dei dati di calore
      HeatMap(df_map_sample[['Latitude', 'Longitude']].values.tolist(), radius=15, blur=10, max_zoom=14).add_to(chicago_map)
      ```
-     👉 Heatmap: https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html
+     > ### 🗺️ Esplora la Mappa di Calore
+     > Puoi consultare l'analisi geospaziale completa qui:  
+     > 👉 [**Chicago Crime Heatmap - Live**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
      
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
      
