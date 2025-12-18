@@ -15,7 +15,7 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
 > ### 📑 Documentazione
 > Puoi visionare la Presentazione PowerPoint del Progetto:  
-> 👉 [**CrimePredictionAI (PDF)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
+> 👉 [**CrimePredictionAI (PDF)**](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
 # 🎯 Obiettivo del progetto
 1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago.
