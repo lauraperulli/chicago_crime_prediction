@@ -14,7 +14,7 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 - Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici reali per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
 
 > ### 📑 Documentazione
-> Puoi consultare la Presentazione PowerPoint del Progetto:  
+> Puoi visionare la Presentazione PowerPoint del Progetto:  
 > 👉 [**CrimePredictionAI (PDF)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
 
 # 🎯 Obiettivo del progetto
@@ -81,7 +81,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      > ### 🗺️ Esplora la Mappa di Calore
      > Puoi consultare l'analisi geospaziale completa qui:  
-     > 👉 [**Chicago Crime Heatmap (HTML)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
+     > 👉 [**Chicago Crime Heatmap (HTML)**](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
      
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
      
