@@ -13,7 +13,9 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
 - Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici reali per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
 
-📑 **Documentazione**: [Scarica la Presentazione PowerPoint del Progetto (PDF)](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
+> ### 📑 Documentazione
+> Puoi consultare la Presentazione PowerPoint del Progetto:  
+> 👉 [**CrimePredictionAI (PDF)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
 
 # 🎯 Obiettivo del progetto
 1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago.
@@ -62,7 +64,6 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      label_counts = df['Is_Crime_Type'].value_counts()
      label_percentages = df['Is_Crime_Type'].value_counts(normalize=True) * 100
      ```
-     <img width="650" height="703" alt="DistribuzioneLabelTheft_vs_ALtri crimini" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
      <p align="center"> <img width="550" src="https://github.com/user-attachments/assets/ecaf26bd-4b82-4b5c-b6fe-d3031da9c926" />
    
 **2. Visualizzazione dei dati e Data Analysis:**
@@ -80,11 +81,10 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      > ### 🗺️ Esplora la Mappa di Calore
      > Puoi consultare l'analisi geospaziale completa qui:  
-     > 👉 [**Chicago Crime Heatmap - Live**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
+     > 👉 [**Chicago Crime Heatmap (HTML)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
      
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
      
-     <img width="650" alt="DistribuzioneTipologiaCrimine" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
      <p align="center"> <img width="550" src="https://github.com/user-attachments/assets/c30c29df-c94e-45dd-a7ed-8e800a3b0b05" />
    
    - Analisi andamento temporale dei crimini (anno, mese, giorno, ora) dei crimini e realizzazione dei GRAFICI A BARRE:
