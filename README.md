@@ -1,4 +1,4 @@
-# 👮 Chicago Crime Prediction AI: Analisi Predittiva e Machine Learning
+# 👮 Chicago Crime Prediction: Analisi Predittiva e Machine Learning
 
 # 🤝 Presentazione
 Ciao, sono LAURA PERULLI | **BSc in "Statistics e Big Data"**.
