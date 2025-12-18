@@ -172,14 +172,12 @@ Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla 
 - Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
 - Machine Learning: Scikit-Learn
 
-# ⚙️ Installazione 
-- Per scaricare e utilizzare il dataset consultare il sito:
-
-  https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data
-- Per installare tutte le librerie necessarie ed eseguire il progetto localmente:
+# ⚙️ Installazione
+1. Scarica il dataset da [**Chicago Data Portal**](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data).
+2. Installa le librerie:
   ```bash
   pip install -r requirements.txt
   ```
 
 
-# 👋 **GRAZIE PER L'ATTENZIONE!**
+# **GRAZIE PER L'ATTENZIONE!** ✨
