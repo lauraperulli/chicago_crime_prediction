@@ -1,7 +1,9 @@
+# 👮 Chicago Crime Prediction AI: Analisi Predittiva e Machine Learning
+
 # 🤝 Presentazione
 Ciao, sono LAURA PERULLI | **BSc in "Statistics e Big Data"**.
 
-Benvenuto, se sei qui è perchè ti interessa consultare il progetto che ho realizzato. Buona visione!!!
+In questo repository presento un progetto di **Data Science**, focalizzato sulla previsione dei crimini nella città di Chicago attraverso modelli statistici e di intelligenza artificiale.
 
 # 🚀 Di cosa si tratta?
 
@@ -9,25 +11,25 @@ Benvenuto, se sei qui è perchè ti interessa consultare il progetto che ho real
 - Realizzazione di un progetto Python incentrato sull'implementazione e l'addestramento di un modello di AI con
 l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 
-- Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
+- Analisi predittiva dei crimini a Chicago con l'utilizzo di un dataset di dati storici reali per prevedere la probabilità che si verifichi un furto (THEFT) in specifiche aree della città. 
 
-- Presentazione PowerPoint del progetto: [CrimePredictionAI_LauraPerulli.pdf](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
+📑 **Documentazione**: [Scarica la Presentazione PowerPoint del Progetto (PDF)](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
-# 🎯 Obiettivo del progetto:
-1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago
-2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern
+# 🎯 Obiettivo del progetto
+1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago.
+2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
 
-# 📂 Dataset: 
+# 📂 Dataset
 Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025).
-- Dimensione originale: Oltre 7 milioni di record;
-- Dataset analizzato: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
-- Feature principali: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
+- Volume: Oltre 7 milioni di record;
+- Campionamento: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
+- Variabili chiave: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
 
-# 🛠️ Pipeline e Codice:
+# 🛠️ Pipeline del Progetto
 Il progetto segue una pipeline suddivisa in tre fasi:
 
 **1. Analisi e pulizia del Dataset:**
-   - Importazione delle librerie usate: (Pandas, Numpy, Matplotlib, Seaborn, Folium, Scikit-Learn).
+   - Importazione delle librerie: (Pandas, Numpy, Matplotlib, Seaborn, Folium, Scikit-Learn).
    - Caricamento ottimizzato: analisi di solo 500.000 righe per bilanciare le performance.
    - Data Cleaning: (identificazione e rimozione di record duplicati e gestione dei valori nulli nelle colonne geografiche)
      
@@ -148,9 +150,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      # Visualizzazione della classifica di rischio per Community Area
      sns.barplot(x=prob_by_comm.index, y=prob_by_comm.values, palette='coolwarm')
      ```
-     
-     <img width="650" height="703" alt="ROC_CurveTheft" src="https://github.com/user-attachments/assets/f16fef65-d95b-4ad2-9204-b4385c928a1a" />
-     <img width="650" height="703" alt="ProbabilitaTheftCommunityArea" src="https://github.com/user-attachments/assets/ae758f92-aa58-4b8a-8b8e-1ca1d3e65210" />
+     <p align="center"> <img width="550" src="https://github.com/user-attachments/assets/f16fef65-d95b-4ad2-9204-b4385c928a1a" /> <img width="550" src="https://github.com/user-attachments/assets/ae758f92-aa58-4b8a-8b8e-1ca1d3e65210" /> </p>
      
 # ✨ Conclusioni
 
