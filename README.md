@@ -5,6 +5,8 @@ Ciao, sono LAURA PERULLI | **BSc in "Statistics e Big Data"**.
 
 In questo repository presento un progetto di **Data Science**, focalizzato sulla previsione dei crimini nella città di Chicago attraverso modelli statistici e di intelligenza artificiale.
 
+---
+
 # 🚀 Di cosa si tratta?
 
 🔎 **ANALISI PREDITTIVA** dei crimini a Chicago:
@@ -17,9 +19,13 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 > Puoi visionare la Presentazione PowerPoint del Progetto:  
 > 👉 [**CrimePredictionAI (PDF)**](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
 
-# 🎯 Obiettivo del progetto
+---
+
+# 🎯 Obiettivi del progetto
 1. **Prevedere la probabilità di furto**: determinare la probabilità che il crimine "THEFT" si verifichi in determinate aree di Chicago.
 2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
+
+---
 
 # 📂 Dataset
 Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025). Ps. non è incluso in questo repository per motivi di dimensioni.
@@ -27,10 +33,12 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 - Campionamento: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
 - Variabili chiave: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
 
-### 🔒 Sicurezza e Protezione dei Dati
+# 🔒 Sicurezza e Protezione dei Dati
 Il repository è configurato con un file `.gitignore` dedicato per garantire un ambiente di sviluppo professionale e sicuro:
 * **Integrità del codice**: Vengono filtrati automaticamente i file temporanei di Python e le cache di sistema, mantenendo il repository leggero e focalizzato esclusivamente sulla logica di analisi.
 * **Best Practices**: Segue gli standard di sicurezza escludendo file di configurazione sensibili.
+
+---
 
 # 🛠️ Pipeline del Progetto
 Il progetto segue una pipeline suddivisa in tre fasi:
@@ -157,7 +165,9 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      sns.barplot(x=prob_by_comm.index, y=prob_by_comm.values, palette='coolwarm')
      ```
      <p align="center"> <img width="550" src="https://github.com/user-attachments/assets/f16fef65-d95b-4ad2-9204-b4385c928a1a" /> <img width="550" src="https://github.com/user-attachments/assets/ae758f92-aa58-4b8a-8b8e-1ca1d3e65210" /> </p>
-     
+
+---
+
 # ✨ Conclusioni
 
 **🔋 Completezza del progetto 95%**
@@ -171,11 +181,15 @@ Attraverso un'analisi esplorativa dettagliata di un vasto dataset relativo alla 
 **PROSPETTIVE FUTURE:**
 - Migliorare l'accuratezza e testare altri modelli di ML (Random Forest, KNN, Reti Neurali) e implentare un'interfaccia utente interattiva per le previsioni in tempo reale.
 
+---
+
 # 💻 Tecnologie utilizzate 
 - Linguaggio di programmazione: Python
 - Data Analysis: Pandas, Numpy
 - Visualizzazione dati: Matplotlib, Seaborn, Folium (per mappe interattive)
 - Machine Learning: Scikit-Learn
+
+---
 
 # ⚙️ Installazione
 1. Scarica il dataset da [**Chicago Data Portal**](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data).
