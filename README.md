@@ -1,7 +1,7 @@
 # 👮 Chicago Crime Prediction: Analisi Predittiva e Machine Learning
 
 # 🤝 Presentazione
-Ciao, sono LAURA PERULLI | **BSc in "Statistics e Big Data"**.
+Ciao, sono LAURA PERULLI | **BSc in "Statistics and Big Data"**.
 
 In questo repository presento un progetto di **Data Science**, focalizzato sulla previsione dei crimini nella città di Chicago attraverso modelli statistici e di intelligenza artificiale.
 
