@@ -27,6 +27,11 @@ Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago”
 - Campionamento: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
 - Variabili chiave: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
 
+### 🔒 Sicurezza e Protezione dei Dati
+Il repository è configurato con un file `.gitignore` dedicato per garantire un ambiente di sviluppo professionale e sicuro:
+* **Integrità del codice**: Vengono filtrati automaticamente i file temporanei di Python e le cache di sistema, mantenendo il repository leggero e focalizzato esclusivamente sulla logica di analisi.
+* **Best Practices**: Segue gli standard di sicurezza escludendo file di configurazione sensibili.
+
 # 🛠️ Pipeline del Progetto
 Il progetto segue una pipeline suddivisa in tre fasi:
 
