@@ -1,0 +1,16 @@
+# Dataset pesanti
+*.csv
+*.zip
+*.parquet
+
+# Python e Cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ambienti virtuali
+venv/
+env/
+
+# File di sistema
+.DS_Store
