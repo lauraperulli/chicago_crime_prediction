@@ -54,7 +54,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      if columns_to_drop:
      df_input.drop(columns=columns_to_drop, inplace=True)
      ```
-   - Defizione della Label: (creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamnto delle classi)
+   - Defizione della Label: (creazione di una variabile target binaria specifica per identificare i furti "THEFT" rispetto ad altre tipologie di reato, realizzazione di un GRAFICO A BARRE per visualizzare lo sbilanciamento delle classi)
      
      ```Python
      # Creazione della variabile target: 1 se il crimine è 'THEFT', 0 altrimenti
