@@ -22,7 +22,7 @@ l'utilizzo della Regressione Logistica come algoritmo di Machine Learning.
 2. **Addestramento del modello di AI**: utilizzo del metodo di Regressione Logistica attraverso analisi e identificazione dei pattern.
 
 # 📂 Dataset
-Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025).
+Il dataset utilizzato è una risorsa pubblica denominata “Crimes in Chicago” proveniente dal dipartimento di polizia di Chicago e disponibile sulla piattaforma Kaggle. Raccoglie informazioni dettagliate sui crimini registrati nella città di Chicago nel periodo (2021-2025). Ps. non è incluso in questo repository per motivi di dimensioni.
 - Volume: Oltre 7 milioni di record;
 - Campionamento: Sottoinsieme di 500.000 righe per performance migliori e campionamento di 75.000 righe per visualizzazioni geografiche ottimizzate;
 - Variabili chiave: Tipo di crimine, data/ora, distretto, area comunitaria, latitudine e longitudine.
