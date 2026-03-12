@@ -94,7 +94,7 @@ Il progetto segue una pipeline suddivisa in tre fasi:
      ```
      > ### 🗺️ Esplora la Mappa di Calore
      > Puoi consultare l'analisi geospaziale completa qui:  
-     > 👉 [**Chicago Crime Heatmap (HTML)**](https://github.com/user-attachments/files/24215774/CrimePredictionAI_LauraPerulli.pdf)
+     > 👉 [**Chicago Crime Heatmap (HTML)**](https://lauraperulli.github.io/chicago_crime_prediction/chicago_crime_heatmap.html)
      
    - Distribuzione per tipologia di Crimine evidenziando i più diffusi "THEFT", "BATTERY", "HOMECIDE":
      
